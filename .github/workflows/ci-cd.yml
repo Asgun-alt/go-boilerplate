@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - development 
+      - main 
 
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Deploy to Development
+    - name: Deploy to Main
       run: |
         echo "${{ secrets.SERVER_SSH_KEY }}" > deploy_key.pem
         chmod 600 deploy_key.pem
