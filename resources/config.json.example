@@ -1,0 +1,52 @@
+{
+  "app": {
+    "name": "go-boilerplate",
+    "version": "1.0.0",
+    "port": 3001
+  },
+  "feature":{
+    "gracefullShutdown" : "10s",
+    "rateLimiter": {
+      "httpLimiter": {
+        "limit": 10,
+        "ttl": "1m0s"
+      }
+    }
+  },
+  "credential": {
+    "auth":{
+      "secretKey" : "tKsEIRA143POR3SAI31R1DFAefaVEi11",
+      "iv" : "AEdEvPOSL1vE"
+    }, 
+    "jwt":{
+      "secretKey" : "tKsJWTP0SAILI1v3LAfad431AmiDt1nE",
+      "jwtExpiredTime" : "60m0s"
+    },
+    "smtp": {
+      "mailFrom":"Go-Boilerplate",
+      "mailAdminRecipient":"admin@gmail.com",
+      "mailSMTP":"smtp.mailtrap.io",
+      "mailPort":"2525",
+      "mailUsername":"87290f409deedf",
+      "mailPassword":"54ace6edad96ed"
+    }
+  },
+  "infrastructure": {
+    "database": {
+      "dialect": "postgres",
+      "host": "localhost",
+      "username": "be",
+      "password": "beDB123",
+      "dbName": "be_db",
+      "maxOpenConn": 50,
+      "maxIddleConn": 25,
+      "maxLifeTimeConn": "30m0s"
+    },
+    "redis" :{
+      "host" : "localhost",
+      "port" : 6379,
+      "password" : "",
+      "db" : 1
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.vscode
+.DS_STORE
+.log
+.ssh
+bin/*
+/resources/*.json
+/log/sys/*.log
+/log/tdr/*.log
+/resources/sqlite/*.db
+cover.out
+cover.html
+/bin/*
